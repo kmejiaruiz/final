@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mi Currículum</title>
+    <script
+      src="https://kit.fontawesome.com/66c9e50f40.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <style>
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        background-color: #ecf5fc;
+        margin: 0;
+        padding: 0;
+        color: #333;
+        line-height: 1.6;
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+      }
+
+      header {
+        background-color: #5bc0de;
+        color: #fff;
+        text-align: center;
+        padding: 30px;
+        border-bottom: 5px solid #46b8da;
+      }
+      main {
+        margin: 0 100px;
+      }
+
+      h1,
+      h2 {
+        color: #333;
+      }
+
+      section {
+        background-color: #fff;
+        margin: 20px;
+        padding: 30px;
+        border-radius: 8px;
+        box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+        opacity: 0;
+        transform: translateY(20px);
+        animation: fadeIn 1s forwards;
+        flex: 1;
+        position: relative;
+      }
+
+      .info p {
+        margin: 10px 0;
+      }
+
+      .experience,
+      .education,
+      .projects,
+      .skills,
+      .training,
+      .research {
+        margin-bottom: 30px;
+      }
+
+      ul {
+        list-style-type: none;
+        padding: 0;
+      }
+
+      ul li {
+        margin-bottom: 15px;
+      }
+
+      .skills ul {
+        display: flex;
+        flex-wrap: wrap;
+        padding: 0;
+      }
+
+      .skills li {
+        margin-right: 15px;
+        margin-bottom: 15px;
+        background-color: #46b8da;
+        padding: 12px;
+        border-radius: 5px;
+        transition: background-color 0.3s ease, transform 0.3s ease;
+        cursor: pointer;
+        color: #fff;
+      }
+
+      .skills li:hover {
+        background-color: #5bc0de;
+        transform: scale(1.05);
+      }
+
+      .btn {
+        display: inline-block;
+        padding: 15px 30px;
+        font-size: 18px;
+        text-align: center;
+        text-decoration: none;
+        background-color: #5bc0de;
+        color: #fff;
+        border-radius: 5px;
+        transition: background-color 0.3s ease;
+      }
+
+      .btn:hover {
+        background-color: #46b8da;
+      }
+
+      .fade-in-up {
+        opacity: 0;
+        transform: translateY(20px);
+        animation: fadeInUp 1s forwards;
+      }
+
+      /* Animaciones */
+      @keyframes fadeIn {
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      @keyframes fadeInUp {
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      footer {
+        text-align: center;
+        background-color: #46b8da;
+        color: #fff;
+        padding: 10px;
+        margin-top: auto;
+      }
+
+      .image {
+        position: absolute;
+        top: -20px;
+        right: -20px;
+      }
+
+      .image img {
+        width: 120px;
+        height: 120px;
+        border-radius: 50%;
+        border: 5px solid #fff;
+        box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+      }
+
+      @media (max-width: 800px) {
+        body {
+          justify-content: center;
+          align-items: center;
+        }
+        main {
+          margin: 0px 40%;
+        }
+        footer {
+          margin: 0 70px;
+          width: 69%;
+        }
+        .footer {
+          display: grid;
+          place-items: center;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <main>
+      <header>
+        <h1>Kleyser Mejia Ruiz</h1>
+        <p>Bachiller y Estudiante</p>
+      </header>
+
+      <section class="info fade-in-up">
+        <div class="image">
+          <img
+            src="https://www.facebook.com/photo/?fbid=3113723492284417&set=a.1398994863757297"
+            alt="Foto de perfil"
+          />
+        </div>
+        <h2>Información de contacto</h2>
+        <p>Dirección: León, León, Nicaragua</p>
+        <p>Teléfono: (505) 8440-7219</p>
+        <p>Email: kleyser57@gmail.com</p>
+        <a href="#!" id="descargarPDF" class="btn">Descargar CV</a>
+      </section>
+
+      <section class="experience fade-in-up">
+        <h2>Experiencia Laboral</h2>
+        <ul>
+          <li>
+            <h3>Claro Nicaragua S.A</h3>
+            <p>05/23 - 09/23</p>
+            <p>Ofrecer servicios Multimedia a las personas casa a casa.</p>
+          </li>
+          <li>
+            <h3>Auxiliar de Tienda AMPM S.A</h3>
+            <p>10/23 - 11/23</p>
+            <p>Ayudar en caja, cosas y mantenimiento básico de la empresa.</p>
+          </li>
+          <!-- Agrega más experiencias laborales según sea necesario -->
+        </ul>
+      </section>
+
+      <section class="education fade-in-up">
+        <h2>Educación</h2>
+        <ul>
+          <li>
+            <h3>Bachiller en Ciencias y Letras</h3>
+            <p>Fecha de graduación: 12, 23</p>
+            <p></p>
+          </li>
+          <!-- <li>
+            <h3>Diploma en Desarrollo Web en Coding Academy</h3>
+            <p>Fecha de finalización: Mes, Año</p>
+          </li> -->
+          <!-- Agrega más información educativa según sea necesario -->
+        </ul>
+      </section>
+
+      <section class="training fade-in-up">
+        <h2>Capacitaciones Recientes</h2>
+        <ul>
+          <li>
+            <h3>Curso de Excel Básico</h3>
+            <p>Fecha de finalización: Junio, 2023</p>
+            <p>
+              Operaciones y manejo básico del programa de ofimática Office 365
+            </p>
+          </li>
+          <li>
+            <h3>Operaciones de caja bancaria</h3>
+            <p>Fecha de finalización: Junio, 2023</p>
+            <p>Operar, arquear y manejar caja bancaria.</p>
+          </li>
+          <li>
+            <h3>Programación web con PHP y MySQL</h3>
+            <p>Fecha de finalización: abril, 2023</p>
+            <p>Programar apps web usando PHP y MySQL.</p>
+          </li>
+          <!-- Agrega más capacitaciones según sea necesario -->
+        </ul>
+      </section>
+
+      <section class="research fade-in-up">
+        <h2>Investigaciones Realizadas</h2>
+        <ul>
+          <li>
+            <h3>
+              Causas y consecuencias de las tolvaneras en la ciudad de Leon 2020
+            </h3>
+            <p>Fecha de realización: Octubre, 2020</p>
+            <p>
+              Investigación documental de las causas y las consecuencias de las
+              tolvaneras en la ciudad de Leon
+            </p>
+          </li>
+          <!-- <li>
+          <h3>Impacto de las Tecnologías Emergentes en la Industria</h3>
+          <p>Fecha de realización: Mes, Año</p>
+          <p>Descubrimientos clave y aplicaciones prácticas.</p>
+        </li> -->
+          <!-- Agrega más investigaciones según sea necesario -->
+        </ul>
+      </section>
+
+      <section class="skills fade-in-up">
+        <h2>Habilidades</h2>
+        <ul>
+          <li class="skills-li"><i class="fab fa-html5"></i> HTML5</li>
+          <li class="skills-li"><i class="fab fa-css3"></i> CSS3</li>
+          <li class="skills-li"><i class="fab fa-js"></i> JavaScript</li>
+          <li class="skills-li"><i class="fa-solid fa-file-word"></i> Word</li>
+          <li class="skills-li">
+            <i class="fa-solid fa-file-powerpoint"></i> PowerPoint
+          </li>
+          <li class="skills-li">
+            <i class="fa-solid fa-file-excel"></i> Excel
+          </li>
+          <li class="skills-li">
+            <i class="fas fa-mobile-alt"></i> Responsive Design
+          </li>
+          <!-- Agrega más habilidades según sea necesario -->
+        </ul>
+      </section>
+
+      <section class="projects fade-in-up">
+        <h2>Proyectos Destacados</h2>
+        <ul>
+          <li>
+            <h3>Formulario de facturacion (Beta branch)</h3>
+            <p>Formulario de facturacion usando, PHP, MySQL, JS y CSS3</p>
+
+            <a
+              class="btn"
+              style="text-decoration: none; color: #fff"
+              href="https://github.com/kmejiaruiz/facturacion"
+              >Ir a repositorio de Github.</a
+            >
+          </li>
+          <li>
+            <h3>Prematriculas 2024 abiertas.</h3>
+            <p>
+              Pagina creada con HTML, CSS y JS la cual indica cuantos dias
+              faltan para la apertura de Prematriculas de la UNAN-Leon, o
+              cuantos dias faltan para que cierren.
+            </p>
+            <a
+              class="btn"
+              style="text-decoration: none; color: #fff"
+              href="https://kmejiaruiz.github.io/prematricula"
+              >Ir a pagina</a
+            >
+          </li>
+
+          <!-- Agrega más proyectos según sea necesario -->
+        </ul>
+      </section>
+    </main>
+    <div class="footer">
+      <footer>&copy; 2023 Kmejiaruiz - Todos los derechos reservados</footer>
+    </div>
+  </body>
+</html>
